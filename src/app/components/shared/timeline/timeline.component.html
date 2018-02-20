@@ -1,0 +1,11 @@
+<div class="timeline">
+  <div class="l-container timeline__item" *ngFor="let message of messages$ | async">
+    <app-insight [message]="message"></app-insight>
+    <app-message [message]="message"></app-message>
+
+    <div class="timeline__chart">
+      <a routerLink="/dashboard">CHART WILL GO HERE</a>
+    </div>
+  </div>
+  <button class="btn--large">Show previous Insights</button>
+</div>

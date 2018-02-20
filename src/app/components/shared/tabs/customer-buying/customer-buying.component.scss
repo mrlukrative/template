@@ -1,0 +1,24 @@
+.buying__container {
+  display:flex;
+
+  .leftCol {
+    width: 50%;
+    height: 320px;
+  }
+
+  .leftCol--title {
+    float: right;
+    font-weight: 600;
+    margin-bottom: 24px;
+    margin-right: 73px;
+  }
+
+  /deep/ app-sparkline {
+    float: right;
+    margin-bottom: 80px;
+  }
+
+  /deep/ .dxc-arg-axis {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../styles/base/_variables.scss';
+
+.overview-header {
+  padding: 0 $padding;
+  display: flex;
+
+  .overview-avatar {
+    width: 72px;
+    height: 109px;
+    margin-top: 28px;
+  }
+
+  h2 {
+    margin: 55px 0 0 12px;
+  }
+}
+
+
+
+
+
+
+
+

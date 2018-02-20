@@ -1,0 +1,40 @@
+<div class="l-container">
+  <h3>Your Customer Segments at a Glance</h3>
+  <md-tab-group (selectChange)="onSelectChange($event)">
+    <md-tab label="Overall">
+      <dx-chart
+        #overallChart
+        [rotated]=true
+        [redrawOnResize]=true
+        [size]="overall.size"
+        [series]="overall.series"
+        [legend]="overall.legend"
+        [dataSource]="overall.dataSource"
+        [commonAxisSettings]="overall.commonAxisSettings"
+        [commonSeriesSettings]="overall.commonSeriesSettings"
+
+      ></dx-chart>
+    </md-tab>
+    <md-tab label="Montly Trend">
+      <app-chart-radio-switcher (change)="handleChangeUpdated($event)"></app-chart-radio-switcher>
+      <dx-chart
+        #montlyTrendChart
+        [redrawOnResize]=true
+        [size]="montlyTrend.size"
+        [series]="montlyTrend.series"
+        [legend]="montlyTrend.legend"
+        [tooltip]="montlyTrend.tooltip"
+        [dataSource]="montlyTrend.dataSource"
+        [argumentAxis]="montlyTrend.argumentAxis"
+        [commonSeriesSettings]="montlyTrend.commonSeriesSettings"
+      >
+        <dxi-value-axis>
+          <dxo-label>
+            <dxo-format type="{{dxFormat}}"></dxo-format>
+          </dxo-label>
+        </dxi-value-axis>
+
+      </dx-chart>
+    </md-tab>
+  </md-tab-group>
+</div>

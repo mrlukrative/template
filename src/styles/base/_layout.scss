@@ -1,0 +1,17 @@
+.l-constrain {
+  width: auto;
+  margin: auto;
+  min-width: 800px;
+  max-width: 1024px;
+}
+
+.l-container {
+  padding: $padding;
+  position: relative;
+  margin-bottom: $padding;
+  background-color: $white;
+}
+
+.l-block {
+  margin-bottom: $padding;
+}

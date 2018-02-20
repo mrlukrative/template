@@ -1,0 +1,72 @@
+<div class="l-container">
+  <h3>
+    {{componentTitle}}
+  </h3>
+
+  <md-tab-group>
+    <md-tab label="Last Week">
+
+      <div class="revenues__container">
+
+        <app-dx-charts [trendData]="lastWeekTrendData"
+                       [formatType]="'currency'"
+                       [seriesType]="'bar'"
+                       [seriesColorFirst]="'#54d76b'"
+                       [seriesColorSecond]="'#2a666c'"
+                       [legendVisible]="false"
+                       [width]="240"
+                       [height]="360">
+        </app-dx-charts>
+
+        <div class="leftCol">
+        <app-sparkline [title]="'First Time Customer'"
+                       [totalCustomers]="3053"
+                       [barSparklineData]="barSparklineData"
+                       [valueField]="'copper2012'"
+                       [period]="'Last 4 Weeks'"
+                       [becameRepeat]="23"
+                       [reactivated]="3"
+                       [barPositiveColor]="'#54d76b'"
+                       [firstLastColor]="'#a8ebb4'"
+                       [seriesType]="'bar'"
+                       *ngIf="barSparklineData">
+        </app-sparkline>
+        <app-sparkline [title]="'Repeat Customers'"
+                       [totalCustomers]="8475"
+                       [barSparklineData]="barSparklineData"
+                       [valueField]="'copper2012'"
+                       [period]="'Last 4 Weeks'"
+                       [becameRepeat]="23"
+                       [reactivated]="3"
+                       [barPositiveColor]="'#2a666c'"
+                       [firstLastColor]="'#93b2b5'"
+                       [seriesType]="'bar'"
+                       *ngIf="barSparklineData">
+        </app-sparkline>
+        </div>
+
+      </div>
+
+    </md-tab>
+    <md-tab label="Daily Trend">
+      <app-fullstacked-bar-group [dataSource]="fullStackedBarData"
+                                 [type]="'stackedBar'"
+                                 [seriesColorFirstTime]="'#54d76b'"
+                                 [seriesColorRepeat]="'#2a666c'"></app-fullstacked-bar-group>
+    </md-tab>
+    <md-tab label="Weekly Trend">
+      <app-fullstacked-bar-group [dataSource]="fullStackedBarData"
+                                 [type]="'fullStackedBar'"
+                                 [seriesColorFirstTime]="'#54d76b'"
+                                 [seriesColorRepeat]="'#2a666c'"
+      ></app-fullstacked-bar-group>
+    </md-tab>
+    <md-tab label="Monthly Trend">
+        <app-fullstacked-bar-group [dataSource]="fullStackedBarData"
+                                   [type]="'fullStackedBar'"
+                                   [seriesColorFirstTime]="'#54d76b'"
+                                   [seriesColorRepeat]="'#2a666c'"
+        ></app-fullstacked-bar-group>
+    </md-tab>
+  </md-tab-group>
+</div>

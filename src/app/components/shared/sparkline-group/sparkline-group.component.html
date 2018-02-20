@@ -1,0 +1,30 @@
+<div class="sparkline-container">
+  <div class="sparkline-container__col left-content">
+    <span class="sparkline-title">{{title}}</span>
+    <span class="sparkline-total" [ngStyle]="{color: barPositiveColor}">{{totalCustomers}}</span>
+    <span class="sparkline-sub-title">{{period}}</span>
+
+    <app-dx-sparkline
+      [dataSource]="barSparklineData"
+      valueField="{{valueField}}"
+      barPositiveColor="{{barPositiveColor}}"
+      firstLastColor="{{firstLastColor}}"
+      type="{{seriesType}}"></app-dx-sparkline>
+  </div>
+
+
+  <!--TODO: Make into component this will support a 'became repeat number', reactivated number -->
+  <!-- Think about setting this dynamically-->
+  <div class="sparkline-container__col right-content" *ngIf="false">
+    <span class="sparkline-sub-title">Became Repeat</span>
+    <span class="sparkline-sub-value" [ngStyle]="{color: barPositiveColor}">{{becameRepeat}}</span>
+    <span class="sparkline-sub-title">Reactived</span>
+    <span class="sparkline-sub-value" [ngStyle]="{color: barPositiveColor}">{{reactivated}}</span>
+  </div>
+
+  <div class="sparkline-container__col right-content" *ngIf="true">
+    <span class="sparkline-sub-title days">days</span> <!-- TODO: @Rafael You will want to dynamically set the value based on the needs of this component -->
+    <span class="sparkline-sub-title">YOY</span>
+    <span class="sparkline-sub-value" [ngStyle]="{color: barPositiveColor}">+12%</span>
+  </div>
+</div>

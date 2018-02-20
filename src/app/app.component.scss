@@ -1,0 +1,14 @@
+@import '../styles/base/_variables.scss';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.app__header {
+  background: $white;
+  padding: $padding $padding 0;
+
+  h1 { margin-bottom: 30px; }
+}
+
+
+
+
+

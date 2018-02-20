@@ -1,0 +1,19 @@
+@import '../../../../styles/base/_variables.scss';
+
+nav {
+  display:flex;
+}
+
+nav a {
+  color: $pivotal-blue;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 58px;
+  padding: 0 18px 14px 18px;
+
+  &.active {
+    color: $grey-dark;
+    border-bottom: 4px solid $grey-dark;
+  }
+}

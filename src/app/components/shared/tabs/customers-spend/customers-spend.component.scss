@@ -1,0 +1,17 @@
+.revenues__container {
+  display:flex;
+
+  .leftCol {
+    width: 50%;
+    height: 320px;
+  }
+
+  /deep/ app-sparkline {
+    float:right;
+    margin-bottom:80px;
+  }
+
+  /deep/ .dxc-arg-axis {
+    display: none;
+  }
+}

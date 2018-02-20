@@ -1,0 +1,26 @@
+@import '../../../../styles/base/_variables.scss';
+
+:host(app-insight) {
+  left: 19px;
+  position: absolute;
+}
+
+.insight {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.insight__icon /deep/ svg {
+  width: 52px;
+  height: 52px;
+}
+
+.insight__date {
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 28px;
+  color: $grey-light;
+  display: inline-block;
+  background-color: $white;
+}

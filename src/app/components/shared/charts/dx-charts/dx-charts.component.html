@@ -1,0 +1,44 @@
+<dx-chart
+  id="chart"
+  [dataSource]="trendData"
+  [equalBarWidth]="false">
+
+  <dxi-series valueField="firstTime"
+              name="First-Time"
+              color="{{seriesColorFirst}}"
+              tooltip="false">
+    <dxo-hover-style>
+      <dxo-hatching direction="none"></dxo-hatching>
+    </dxo-hover-style>
+  </dxi-series>
+
+
+  <dxi-series valueField="firstTime"
+              name="Second-Time"
+              color="{{seriesColorSecond}}"
+              tooltip="false">
+    <dxo-hover-style>
+      <dxo-hatching direction="none"></dxo-hatching>
+    </dxo-hover-style>
+  </dxi-series>
+
+  <dxo-common-series-settings
+    argumentField="date"
+    type="bar">
+  </dxo-common-series-settings>
+
+  <dxi-value-axis>
+    <dxo-grid opacity="0.3"></dxo-grid>
+  </dxi-value-axis>
+
+  <dxo-legend
+    verticalAlignment="bottom"
+    horizontalAlignment="center"
+    rowItemSpacing="100" *ngIf="legendVisible">
+    <dxo-margin top="30"></dxo-margin>
+  </dxo-legend>
+
+  <dxo-export [enabled]="false"></dxo-export>
+  <dxo-margin left="0"></dxo-margin>
+  <dxo-size width="{{width}}" height="{{height}}" *ngIf="(width && height) || width"></dxo-size>
+</dx-chart>

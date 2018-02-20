@@ -1,0 +1,18 @@
+.tooltip-container {
+  padding: 0;
+  line-height: 22px;
+  display: flex;
+
+  .tooltip-container__col {
+    width: 100%;
+    white-space: nowrap;
+
+    &.colLeft {
+      margin-right: 8px;
+    }
+
+    &.colRight {
+      margin-left: 8px;
+    }
+  }
+}

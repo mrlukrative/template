@@ -1,0 +1,34 @@
+.mat-tab-header {
+  margin-bottom: $padding !important;
+}
+
+.mat-tab-labels {
+  margin-top: 10px;
+}
+
+.mat-tab-label {
+  width: 100%;
+  min-width: 95px !important;
+}
+
+.mat-ink-bar {
+  height: 4px !important;
+  background-color: $grey-dark;
+}
+
+.mat-tab-body-active,
+.mat-tab-body-content {
+  overflow: visible !important;
+}
+
+.mat-radio-button:not(:last-child) {
+  margin-right: 36px;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle, .mat-radio-outer-circle {
+  border-color: #34495E;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #358ED7;
+}

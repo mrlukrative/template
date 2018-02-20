@@ -1,0 +1,49 @@
+.sparkline-container {
+  display: flex;
+  position: relative;
+  width: 220px;
+  margin-right: 20px;
+}
+
+.sparkline-container__col {
+  text-align: right;
+
+
+  .sparkline-title, .sparkline-sub-title {
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+  }
+
+  .sparkline-total {
+    font-size: 42px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .sparkline-sub-title {
+    font-weight: 300;
+  }
+
+  &.left-content {
+    max-width: 167px;
+    width: 167px;
+  }
+
+  &.right-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    .sparkline-sub-title {
+      display: block;
+      margin-top: 24px;
+    }
+  }
+
+  .days {
+    font-weight: 600;
+  }
+
+}

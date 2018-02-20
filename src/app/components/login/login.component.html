@@ -1,0 +1,11 @@
+<div class="login-wrapper">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+    <label>Indentity name</label>
+    <input type="text" [(ngModel)]='user.userName' required name="username">
+    <label>Password</label>
+    <input type="password" [(ngModel)]='user.password' required name="password">
+    <button (click)="login()">Login</button>
+
+    <span *ngIf="hasError" class="errorMsg">{{errorMessage}}</span>
+  </form>
+</div>

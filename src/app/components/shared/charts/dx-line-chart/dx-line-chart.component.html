@@ -1,0 +1,29 @@
+<dx-chart
+  id="chart"
+  [dataSource]="dataSource"
+  (onLegendClick)="legendClick($event)">
+  <dxi-series valueField="you" name="You" color="{{seriesColorYou}}"></dxi-series>
+  <dxi-series valueField="competitors" name="Competitors" color="{{seriesColorCompetitors}}"></dxi-series>
+  <dxi-series valueField="yearOverYear" name="Year over Year" color="{{seriesColorYear}}" dashStyle="dot">
+  </dxi-series>
+
+  <dxo-common-series-settings
+    argumentField="date"
+    type="{{type}}">
+  </dxo-common-series-settings>
+
+  <dxi-value-axis>
+    <dxo-label>
+      <dxo-format type=""></dxo-format>
+    </dxo-label>
+    <dxo-grid opacity="0.3"></dxo-grid>
+  </dxi-value-axis>
+
+  <dxo-legend
+    verticalAlignment="bottom"
+    horizontalAlignment="center">
+    <dxo-margin top="30"></dxo-margin>
+  </dxo-legend>
+
+  <dxo-size width="455" height="360"></dxo-size>
+</dx-chart>

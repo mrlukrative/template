@@ -1,0 +1,7 @@
+<div class="chart-radio-switcher">
+<md-radio-group class="example-radio-group" [(ngModel)]="amountTypeSelection">
+  <md-radio-button class="example-radio-button" *ngFor="let amount of amountType" [value]="amount" (change)="onChange(amount)">
+    {{amount}}
+  </md-radio-button>
+</md-radio-group>
+</div>

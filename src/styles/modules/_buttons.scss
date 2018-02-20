@@ -1,0 +1,24 @@
+button,
+[class^='btn'] { @include anime(box-shadow);
+  height: 50px;
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 15px;
+  text-align: center;
+  color: $pivotal-blue;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid $pivotal-blue;
+  box-shadow: 3px 3px 0 0 rgba($grey-dark, 0.1);
+
+  &:hover { box-shadow: 0 0 0 0 rgba($grey-dark, 0.1); }
+
+  &[class*='--solid'] {
+    color: $white;
+    background-color: $pivotal-blue;
+  }
+
+  &[class*='--large'] { min-width: 440px; }
+}

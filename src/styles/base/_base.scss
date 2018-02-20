@@ -1,0 +1,50 @@
+html, body {
+  @extend %ff;
+  padding: 0; margin: 0;
+}
+
+body {
+  font-size: 12px;
+  padding-bottom: $padding;
+  background-color: $grey-lightest;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: $grey-dark;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 { // insight titles
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: $black;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+h5 { // chart titles
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  color: $grey-light;
+}

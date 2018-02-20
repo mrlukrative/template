@@ -1,0 +1,76 @@
+<div class="l-container">
+  <h3>
+    {{componentTitle}}
+  </h3>
+
+  <md-tab-group>
+    <md-tab label="Last Week">
+
+      <div class="revenues__container">
+
+        <app-dx-charts [trendData]="lastWeekTrendData"
+                       [formatType]="'currency'"
+                       [seriesType]="'bar'"
+                       [seriesColorFirst]="'#585858'"
+                       [seriesColorSecond]="'#c0c0c0'"
+                       [legendVisible]="false"
+                       [width]="240"
+                       [height]="360">
+        </app-dx-charts>
+
+        <div class="leftCol">
+          <app-sparkline [title]="'Average Ticket Size'"
+                         [totalCustomers]="3053"
+                         [barSparklineData]="barSparklineData"
+                         [valueField]="'copper2012'"
+                         [period]="'Last 4 Weeks'"
+                         [becameRepeat]="23"
+                         [reactivated]="3"
+                         [barPositiveColor]="'#585858'"
+                         [firstLastColor]="'#c0c0c0'"
+                         [seriesType]="'area'"
+                         *ngIf="barSparklineData">
+          </app-sparkline>
+          <app-sparkline [title]="'Competitors Average'"
+                         [totalCustomers]="8475"
+                         [barSparklineData]="barSparklineData"
+                         [valueField]="'copper2012'"
+                         [period]="'Last 4 Weeks'"
+                         [becameRepeat]="23"
+                         [reactivated]="3"
+                         [barPositiveColor]="'#585858'"
+                         [firstLastColor]="'#c0c0c0'"
+                         [seriesType]="'area'"
+                         *ngIf="barSparklineData">
+          </app-sparkline>
+        </div>
+
+      </div>
+
+    </md-tab>
+    <md-tab label="Daily Trend">
+      <app-dx-line-chart [dataSource]="lineChartData"
+                         [type]="'line'"
+                         [seriesColorYou]="'#585858'"
+                         [seriesColorCompetitors]="'#c0c0c0'"
+                         [seriesColorYear]="'#000000'"
+        ></app-dx-line-chart>
+    </md-tab>
+    <md-tab label="Weekly Trend">
+      <app-dx-line-chart [dataSource]="lineChartData"
+                         [type]="'line'"
+                         [seriesColorYou]="'#585858'"
+                         [seriesColorCompetitors]="'#c0c0c0'"
+                         [seriesColorYear]="'#000000'"
+      ></app-dx-line-chart>
+    </md-tab>
+    <md-tab label="Monthly Trend">
+      <app-dx-line-chart [dataSource]="lineChartData"
+                         [type]="'line'"
+                         [seriesColorYou]="'#585858'"
+                         [seriesColorCompetitors]="'#c0c0c0'"
+                         [seriesColorYear]="'#000000
+                         '"></app-dx-line-chart>
+    </md-tab>
+  </md-tab-group>
+</div>

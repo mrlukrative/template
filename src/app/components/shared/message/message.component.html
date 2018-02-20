@@ -1,0 +1,9 @@
+<div class="message">
+  <div class="message__content">
+    <h4>{{ message.title }}</h4>
+    <p>{{ message.recommendation }}</p>
+  </div>
+  <div *ngIf="message.cta" class="message__cta">
+    <button class="btn--solid--large" (click)="openDialog(message.cta.url)">{{ message.cta.label }}</button>
+  </div>
+</div>

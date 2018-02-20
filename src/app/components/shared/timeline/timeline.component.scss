@@ -1,0 +1,32 @@
+@import '../../../../styles/base/_variables.scss';
+
+//Height set for all DX charts used with in this component
+/deep/ dx-chart {
+  height: 240px;
+}
+
+.timeline__item {
+  display: flex;
+  position: relative;
+  padding-left: 100px;
+  justify-content: space-between;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-left: 3px solid $pivotal-green;
+    top: -10px; bottom: -10px; left: 43px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 25px;
+
+    &:before { bottom: -25px; }
+  }
+}
+
+.timeline__chart {
+  width: calc(40% - 10px);
+  min-height: 250px; // temporary
+}

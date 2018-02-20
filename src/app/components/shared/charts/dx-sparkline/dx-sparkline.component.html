@@ -1,0 +1,16 @@
+<dx-sparkline class="sparkline" style="float:right;margin-right:-8px;"
+              [dataSource]="dataSource"
+              argumentField="week"
+              valueField="{{valueField}}"
+              type="{{type}}"
+              barPositiveColor="{{barPositiveColor}}"
+              firstLastColor="{{firstLastColor}}">
+
+  <dxo-tooltip
+    [enabled]="false"
+    zIndex="9999">
+  </dxo-tooltip>
+
+  <dxo-margin top="0" left="0" bottom="0" right="-8"></dxo-margin>
+  <dxo-size width="79" height="30"></dxo-size>
+</dx-sparkline>
